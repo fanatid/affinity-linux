@@ -1,0 +1,13 @@
+[package]
+name = "affinity-linux"
+version = "1.0.0"
+edition = "2021"
+description = "Get and set CPU affinity"
+repository = "https://github.com/fanatid/affinity-linux"
+license = "MIT"
+keywords = ["affinity", "cpu", "core", "thread", "process"]
+categories = ["os"]
+
+[target.'cfg(target_os = "linux")'.dependencies]
+libc = "0.2.171"
+errno = "0.3.10"
