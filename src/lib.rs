@@ -57,7 +57,7 @@ pub fn set_thread_affinity(core_ids: impl Iterator<Item = usize>) -> Result<()> 
 
 #[cfg(not(target_os = "linux"))]
 pub fn set_thread_affinity(core_ids: impl Iterator<Item = usize>) -> Result<()> {
-    Ok(None)
+    Ok(())
 }
 
 #[cfg(all(test, target_os = "linux"))]
