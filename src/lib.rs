@@ -32,7 +32,7 @@ pub fn get_thread_affinity() -> Result<Option<HashSet<usize>>> {
 
 #[cfg(not(target_os = "linux"))]
 pub fn get_thread_affinity() -> Result<Option<HashSet<usize>>> {
-    None
+    Ok(None)
 }
 
 #[cfg(target_os = "linux")]
